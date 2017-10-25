@@ -33,7 +33,7 @@ int main()
 {
 	std::multiset<int> set;
 	const unsigned int sizeArray = 10;
-	for (unsigned char i = 0; i < sizeArray; i++)
+	for (unsigned int i = 0; i < sizeArray; i++)
 	{
 		set.insert(std::rand() % 10);
 	}
