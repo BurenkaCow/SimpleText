@@ -11,30 +11,25 @@ int main()
 	}
 	int maxValue1 = array[0];
 	int maxValue2 = array[0];
-	int* point = &maxValue1;
+	int* pFirstMax = &maxValue1;
+	int* pSecondMax = &maxValue2;
 	for (unsigned char i = 1; i < 10; i++)
 	{
-		if (array[i] > *point)
+		if (array[i] > *pSecondMax)
 		{
-			*point = array[i];
-			if (point == &maxValue1)
+			*pSecondMax = array[i];
+			if (*pSecondMax > *pFirstMax)
 			{
-				point = &maxValue2;
-			}
-			else
-			{
-				point = &maxValue1;
+				std::swap(pFirstMax, pSecondMax);
 			}
 		}
 	}
-	if (maxValue1 < maxValue2) 
+	if (maxValue1 < maxValue2)
 	{
 		std::swap(maxValue1, maxValue2);
 	}
 
-    return 0;
+	return 0;
 }
-
-
 
 
